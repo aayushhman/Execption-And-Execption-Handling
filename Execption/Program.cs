@@ -11,23 +11,47 @@ namespace Execption
         static void Main(string[] args)
 
       {
-
-           
             try
             {
+                int a = 10;
+                int b = 2;
+                int c = a / b;
+
                 int[] arr = new int[3];
                 arr[0] = 11;
                 arr[1] = 22;
                 arr[2] = 33;
                 arr[3] = 44;
 
-                // string a = null;
-                //  Console.WriteLine(a.Length);
             }
-            catch (Exception ex)
+            catch (DivideByZeroException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message); ;
+            }
+
+            //try
+            //{
+            //    int[] arr = new int[3];
+            //    arr[0] = 11;
+            //    arr[1] = 22;
+            //    arr[2] = 33;
+            //    arr[3] = 44;
+
+            //    // string a = null;
+            //    //  Console.WriteLine(a.Length);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
 
             //Console.WriteLine("Enter a number:");
             //string number = Console.ReadLine();
