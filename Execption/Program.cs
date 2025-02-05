@@ -10,26 +10,84 @@ namespace Execption
     {
         static void Main(string[] args)
 
-        {
-            int[] a = new int[3];
+      {
+
+           
             try
             {
-            a[0] = 11;
-            a[1] = 22;
-            a[2] = 33;
-            a[3] = 44;
+                int[] arr = new int[3];
+                arr[0] = 11;
+                arr[1] = 22;
+                arr[2] = 33;
+                arr[3] = 44;
 
-               foreach (int item in a)
-            {
-                Console.WriteLine(item);
+                // string a = null;
+                //  Console.WriteLine(a.Length);
             }
-
-            }
-            catch(IndexOutOfRangeException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Array' range is excuded!!!");
                 Console.WriteLine(ex.Message);
             }
+
+            //Console.WriteLine("Enter a number:");
+            //string number = Console.ReadLine();
+            //try
+            //{
+            //int num = int.Parse(number);
+            //Console.WriteLine("number is: " + num);
+            //}
+            //catch (FormatException ex)
+            //{
+            //    Console.WriteLine("string format is invalid!!");
+            //    Console.WriteLine(ex.Message);
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //////try
+            //////{
+            //////     string name = null;
+            //////    Console.WriteLine(name.Length);
+
+            //////}
+            //////catch(NullReferenceException ex)
+            //////{
+            //////    Console.WriteLine("string is null...");
+            //////    Console.WriteLine(ex.Message);
+            //////}
+            Console.ReadLine();
+        ////    int[] a = new int[3];
+        ////    try
+        ////    {
+        ////    a[0] = 11;
+        ////    a[1] = 22;
+        ////    a[2] = 33;
+        ////    a[3] = 44;
+
+        ////       foreach (int item in a)
+        ////    {
+        ////        Console.WriteLine(item);
+        ////    }
+
+        ////    }
+        ////    catch(IndexOutOfRangeException ex)
+        ////    {
+        ////        Console.WriteLine("Array' range is excuded!!!");
+        ////        Console.WriteLine(ex.Message);
+        ////    }
         
           
 
