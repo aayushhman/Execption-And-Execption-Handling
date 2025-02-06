@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,25 +18,52 @@ namespace Execption
                 int b = 2;
                 int c = a / b;
 
-                int[] arr = new int[3];
-                arr[0] = 11;
-                arr[1] = 22;
-                arr[2] = 33;
-                arr[3] = 44;
+                //int[] arr = new int[3];
+                //arr[0] = 11;
+                //arr[1] = 22;
+                //arr[2] = 33;
+                //arr[3] = 44;
+
+
+
+
+                //string a = null;
+                //Console.WriteLine(a.Length);
 
             }
             catch (DivideByZeroException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch (IndexOutOfRangeException ex)
+            finally
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Finally block executed...");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message); ;
-            }
+            //try
+            //{
+            //    int a = 10;
+            //    int b = 2;
+            //    int c = a / b;
+
+            //    int[] arr = new int[3];
+            //    arr[0] = 11;
+            //    arr[1] = 22;
+            //    arr[2] = 33;
+            //    arr[3] = 44;
+
+            //}
+            //catch (DivideByZeroException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (IndexOutOfRangeException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message); ;
+            //}
 
             //try
             //{
@@ -150,6 +178,26 @@ namespace Execption
             //Console.WriteLine("remaning statement 3");
             Console.ReadLine();
 
+        }
+    }
+
+    [Serializable]
+    internal class NullrefrenceExecption : Exception
+    {
+        public NullrefrenceExecption()
+        {
+        }
+
+        public NullrefrenceExecption(string message) : base(message)
+        {
+        }
+
+        public NullrefrenceExecption(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected NullrefrenceExecption(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
         }
     }
 }
