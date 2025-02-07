@@ -12,33 +12,59 @@ namespace Execption
         static void Main(string[] args)
 
       {
+            int account_balance = 5000;
+            int withdrawl_balance = 30000;
             try
+            { 
+
+
+  
+                if (account_balance<withdrawl_balance)
             {
-                int a = 10;
-                int b = 2;
-                int c = a / b;
-
-                //int[] arr = new int[3];
-                //arr[0] = 11;
-                //arr[1] = 22;
-                //arr[2] = 33;
-                //arr[3] = 44;
-
-
-
-
-                //string a = null;
-                //Console.WriteLine(a.Length);
+                throw new Exception(" insufficent balance!!");
 
             }
-            catch (DivideByZeroException ex)
+            else
             {
-                Console.WriteLine(ex.Message);
+                account_balance = account_balance - withdrawl_balance;
+                Console.WriteLine("Remaning balance is : " + account_balance);
+                Console.WriteLine("transction completed sucessfully.....");
             }
-            finally
+
+            }
+            catch(Exception ex)
             {
-                Console.WriteLine("Finally block executed...");
+                Console.WriteLine(ex.Message); ;
             }
+          
+            Console.ReadLine();
+            //try
+            //{
+            //    int a = 10;
+            //    int b = 2;
+            //    int c = a / b;
+
+            //    //int[] arr = new int[3];
+            //    //arr[0] = 11;
+            //    //arr[1] = 22;
+            //    //arr[2] = 33;
+            //    //arr[3] = 44;
+
+
+
+
+            //    //string a = null;
+            //    //Console.WriteLine(a.Length);
+
+            //}
+            //catch (DivideByZeroException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Finally block executed...");
+            //}
             //try
             //{
             //    int a = 10;
